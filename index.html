@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="sidebar-active">
+        <label for="sidebar-active" class="open-sidebar-btn"><i class="fa-solid fa-bars"></i></label>
+        <label for="sidebar-active" id="overlay"></label>
+        <div class="links-container">
+            <label for="sidebar-active" class="close-sidebar-btn"><i class="fa-solid fa-xmark"></i></label>
+            <a href="#" class="home-links">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+            <a href="#">Blog</a>
+            <a href="#">Portfolio</a>
+        </div>
+    </nav>
+
+    
+  
+
+    <script>
+        document.querySelector('.toggle-btn').addEventListener('click', function(){
+            document.querySelector('.nav-items').classList.toggle('show')
+            document.querySelector('.overlay').classList.toggle('show')
+
+        })
+        document.querySelector('.overlay').addEventListener('click', function(){
+            document.querySelector('.nav-items').classList.remove('show')
+            document.querySelector('.overlay').classList.remove('show')
+
+        })
+
+      
+    </script>
+    
+</body>
+</html>
